@@ -1,9 +1,74 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="primary">
+    <p class="aligncenter">
+      <img width="90" height="70" src="/assets/main-image2.png"  />
+    </p>
     <ion-title>
-      Tab Three
+      <h1>Perfil</h1>
     </ion-title>
   </ion-toolbar>
+  <style>
+      .aligncenter {
+          text-align: center;
+          margin-top:10px;
+          margin-bottom:-40px;
+      }
+      .ion-toolbar{
+        --background:red;
+      }
+      .margen{
+        margin-left:70px;
+      }
+      .avatar{
+        margin-left:50px;
+      }
+      .b{
+        color:primary;
+      }
+      </style>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <br />
+  <table width=80% >
+    <tr>
+      <td > 
+        <ion-avatar class="avatar">
+          <img src="/assets/cooking-icon-png-16.jpg" />
+        </ion-avatar>
+      </td>
+      <td class="margen">
+        <p>
+          <ion-text color="secondary"> 
+            <b> Nombre:</b>
+          </ion-text>
+          {{ usersArray[0].name }}<br />
+          <ion-text color="secondary"> 
+            <b> Sexo:</b>
+          </ion-text>
+          {{ usersArray[0].sex }}<br />
+          <ion-text color="secondary"> 
+           <b> Edad:</b>  
+          </ion-text>
+          {{ usersArray[0].years }}<br />
+        </p>
+      </td>
+      <td>
+
+      </td>
+    </tr>
+  </table>
+  <section text-center>
+      <br /><br /><br /><br />
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/search" routerDirection="forward"> Cambiar datos</ion-button><br /><br />
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/list/:id_user" routerDirection="forward" > Mis Recetas</ion-button><br /><br /> 
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/new" routerDirection="forward"> Eliminar cuenta</ion-button><br /><br />
+  </section>
+
+
+ 
+  
+  
+
+
+</ion-content>

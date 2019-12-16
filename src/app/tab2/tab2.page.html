@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+      <p class="aligncenter">
+          <img width="90" height="70" src="/assets/main-image2.png"  />
+      </p>
     <ion-title>
-      Tab Two
+      <h1>Menú</h1>
     </ion-title>
+
   </ion-toolbar>
+  <style>
+      .aligncenter {
+          text-align: center;
+          margin-top:10px;
+          margin-bottom:-40px;
+      }
+      </style>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <section text-center>
+      <br /><br />
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/search" routerDirection="forward"> Buscar Recetas</ion-button><br /><br />
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/list" routerDirection="forward" > Listar Recetas</ion-button><br /><br /> 
+      <ion-button size="large"  text-capitalize="false" routerLink="/tabs/tab2/new" routerDirection="forward"> Añadir Recetas</ion-button><br /><br />
+  </section>
+</ion-content>

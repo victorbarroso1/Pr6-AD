@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
-  constructor() {}
+  usersArray = [
+    { name:'Guille', sex:'Men', years:'23', country: 'Spain' }
+    ,{ name:'Victor', sex:'Men', years:'22', country: 'Spain' }
+  ];
+ // constructor() {}
 
 }

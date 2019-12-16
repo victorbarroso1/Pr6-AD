@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Nueva Receta</ion-title>
+    </ion-toolbar>
+    <style>
+    .bigtext{
+      --padding-bottom: 350px !important;        }
+    </style>
+  </ion-header>
+  
+  <ion-content>
+    <p>Texto de prueba</p>
+    <form>
+        <ion-item lines="full">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+    
+        <ion-item lines="full">
+          <ion-label position="floating" >Descripción</ion-label>
+          <ion-textarea class="bigtext"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-button>
+              
+            </ion-button>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="block">Crear</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+  </ion-content>
+  

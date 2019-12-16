@@ -1,41 +1,97 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
+  <ion-toolbar color="primary">
+    <p class="aligncenter">
+        <img width="90" height="70" src="/assets/main-image2.png"  />
+      </p>
+    <ion-title>  
+      <h1>Inicio</h1>
     </ion-title>
   </ion-toolbar>
+  <style>
+      .aligncenter {
+          text-align: center;
+          margin-top:10px;
+          margin-bottom:-40px;
+      }
+      .item ion-thumbnail {
+    min-width: 7rem;    
+    min-height: 7rem;
+    img {
+        max-width: 7rem;    
+        max-height: 7rem;
+    }
+}
+      </style>
 </ion-header>
 
 <ion-content>
     <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+     <!-- <img src="/assets/shapes.svg" alt="" />-->
+      <img src="/assets/recipes-header-m.jpg" alt="" />
+
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-title>Bienvenido a Recipe Book!</ion-card-title>
       </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      <ion-card-content >
+        <p>Disfruta de las mejores recetas o comparte las tuyas registrándote!</p>
       </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
+    <ion-list lines=1  >
+      <ion-list-header  >
+        <ion-label>Añadidas recientemente</ion-label>
       </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
+      
+
+      <!-- se muestran las 5 últimas recetas -->
+      <ion-item *ngFor="let recipe of recent_recipes_Array" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">      
+        <ion-thumbnail slot="start" >
+          <!-- la imagen del thumbnail será variable de la receta-->
+            <img src="/assets/recipes-header-m.jpg"/>
+
+        </ion-thumbnail>
+        <ion-label  text-center> 
+          <h1> {{ recipe.name }} </h1>
+          <p>
+            <ion-icon slot="start" color="medium" name="time"></ion-icon>
+            {{ recipe.time }} min.              
+            <ion-icon slot="start" color="medium" name="star"></ion-icon>
+            {{ recipe.stars}}
+            <br />
+            <br />
+            {{recipe.description}}
+          </p>
+        </ion-label>
+    </ion-item>
+    <!--
+    <ion-item *ngFor="let recipe of recent_recipes_Array" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">
+
+      <ion-label  text-center>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+                <img width="90" height="70" src="/assets/main-image2.png"  />
+            </ion-col>
+            <ion-col>
+                <h1> {{ recipe.name }} </h1>
+                <p>
+                  <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                  {{ recipe.time }} min.              
+                  <ion-icon slot="start" color="medium" name="star"></ion-icon>
+                  {{ recipe.stars}}
+                  <br />
+                  <br />
+                  {{recipe.description}}
+                </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </ion-label>
+  </ion-item> -->
+
+
+
+
+     
     </ion-list>
 </ion-content>

@@ -8,13 +8,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AutosizeDirective } from './autosize.directive';
+
+//import { IonicImageViewerModule } from 'ionic-img-viewer';
+
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AutosizeDirective],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
+    //IonicImageViewerModule,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tab2"></ion-back-button>
+        </ion-buttons>
+    <ion-title>{{recipe_id}}</ion-title>
+  </ion-toolbar>
+  <style>
+
+  ion-slide.swiper-slide {
+        left: 0%;
+    }
+    
+    .slide-zoom {
+        background: #e6e6e6;
+    }
+ 
+    .imagen-fija{
+      width: 150px !important;
+      height: 150px !important;
+    }
+  </style>
+  
+</ion-header>
+
+<ion-content >
+    <ion-slides class="image-slider" loop="true" autoplay="true" speed="8000" slidesPerView="1" [options]="slideOpt"> 
+        <ion-slide *ngFor="let img of images" >
+            <ion-card color="primary">
+              <p >
+                  <img  src="assets/img/{{img}}"  />
+              </p>
+                    
+            </ion-card>
+
+          
+        </ion-slide>
+      </ion-slides>
+
+     
+
+</ion-content>

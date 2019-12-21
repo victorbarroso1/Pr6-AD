@@ -20,5 +20,5 @@ export class RecipePage implements OnInit {
  ngOnInit() {
    this.recipe_id = this.activatedRoute.snapshot.paramMap.get('recipe_id');
  }
- images = ['bigmac.jpg', 'bigmac.jpg', 'borrar.jpg'];
+ images = ['receta1.jpg', 'bigmac.jpg', 'borrar.jpg'];
 }

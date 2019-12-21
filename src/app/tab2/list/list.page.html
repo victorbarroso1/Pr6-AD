@@ -5,8 +5,49 @@
     </ion-buttons>
     <ion-title>Listado</ion-title>
   </ion-toolbar>
+  <style>
+    .aligncenter {
+        text-align: center;
+        margin-top:10px;
+        margin-bottom:-40px;
+    }
+    .item ion-thumbnail {
+  min-width: 7rem;    
+  min-height: 7rem;
+  img {
+      max-width: 7rem;    
+      max-height: 7rem;
+  }
+}
+    </style>
 </ion-header>
 
 <ion-content>
-  <p>Texto de prueba</p>
+  <ion-list lines=1  >
+    <ion-list-header  >
+      <ion-label><h1>Recetas</h1></ion-label>
+    </ion-list-header>
+    
+
+    <!-- se muestran las 5 últimas recetas -->
+    <ion-item *ngFor="let recipe of recipesArray" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">      
+      <ion-thumbnail slot="start" >
+        <!-- la imagen del thumbnail será variable de la receta-->
+          <img src="/assets/img/{{recipe.imagen}}"/>
+
+      </ion-thumbnail>
+      <ion-label  text-center> 
+        <h1> {{ recipe.name }} </h1>
+        <p>
+          <ion-icon slot="start" color="medium" name="time"></ion-icon>
+          {{ recipe.time }} min.              
+          <ion-icon slot="start" color="medium" name="star"></ion-icon>
+          {{ recipe.stars}}
+          <br />
+          <br />
+          {{recipe.description}}
+        </p>
+      </ion-label>
+  </ion-item>  
+  </ion-list>
 </ion-content>

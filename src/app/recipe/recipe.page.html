@@ -19,11 +19,46 @@
       width: 150px !important;
       height: 150px !important;
     }
+    .space{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .ingredientes{
+      margin-left: 10px;
+      margin-right: 10px;
+      color: gray;
+      margin-bottom: 0px;
+    }
+    .vermas{
+      display: inline;
+      margin-bottom:0px;
+      margin-left:10px;
+      color:blue;
+      text-decoration:underline;
+    }
   </style>
   
 </ion-header>
 
 <ion-content >
+    <h2 class="space" >Curry de Verduras con patatas asadas</h2>
+    <p class="ingredientes">Ingredientes: Patata, Cebolla, Leche, Calabacín, Zanahoria,...</p>
+    <p class="vermas">Ver más</p>
+    <p class="space">
+      <ion-icon  slot="start" color="medium" name="time">                
+      </ion-icon>
+      60 min.  
+     <ion-icon  slot="start" color="medium" name="star"></ion-icon>
+     3
+     <br />
+     <br />
+     1. Si vamos a acompañar el curry de verduras con patatas asadas, lo primero que haremos es lavar bien las patatas y hacerles un corte profundo por la parte superior (fíjate en la abertura que tienen en la foto).
+    <br />
+    <br />
+     2. Las ponemos a cocer en abundante agua hirviendo y las dejaremos hasta que se puedan atravesar fácilmente por un tenedor o un palillo.
+    </p>
+
+    
     <ion-slides class="image-slider" loop="true" autoplay="true" speed="8000" slidesPerView="1" [options]="slideOpt"> 
         <ion-slide *ngFor="let img of images" >
             <ion-card color="primary">

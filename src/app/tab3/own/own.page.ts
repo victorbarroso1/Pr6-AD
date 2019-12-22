@@ -1,22 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.page.html',
-  styleUrls: ['./list.page.scss'],
+  selector: 'app-own',
+  templateUrl: './own.page.html',
+  styleUrls: ['./own.page.scss'],
 })
-export class ListPage implements OnInit {
+export class OwnPage implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-    
-      //llama a función que devuelve lista.
-      
-    
   }
-  
-  
   recipesArray = [
     {name:'Curry de Verduras con patatas asadas', time:'90', stars:'4.3', description: 'Para realizar esta receta será necesario...', imagen: 'receta1.jpg' }
     ,{ name:'Caldo de navidad con caracolas rellenas', time:'60', stars:'4.0', description: 'Comida perfecta para servir en navidades...', imagen: 'receta2.jpg'}

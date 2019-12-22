@@ -11,5 +11,16 @@ export class SearchPage implements OnInit {
 
   ngOnInit() {
   }
+  ingredientes = [
+    
+];
+
+addIngredientes() {
+    this.ingredientes.push("");
+}
+search(){
+  //pasar al backend los datos de ingredientes y nombre
+  
+}
 
 }

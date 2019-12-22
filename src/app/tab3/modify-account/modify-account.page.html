@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificar Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br /><br />
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating" >Nombre</ion-label>
+      <ion-input type="text" placeholder="{{usersArray[0].name}}" ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating" >Sexo</ion-label>
+      <ion-input type="text" placeholder="{{usersArray[0].sex}}"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating" >Edad</ion-label>
+      <ion-input type="text" placeholder="{{usersArray[0].years}}"></ion-input>
+    </ion-item>
+    <br /><br />
+    <section text-center>
+      <ion-button size="large" type="submit" text-capitalize="false" > Guardar cambios</ion-button>
+      <ion-button size="large" type="submit" text-capitalize="false" routerLink="/tabs/tab3" routerDirection="backward"> Cancelar</ion-button><br /><br />
+    </section>
+    </form>
+    
+</ion-content>

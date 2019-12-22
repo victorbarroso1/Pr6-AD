@@ -11,9 +11,24 @@
     <form>
       <ion-item lines="full">
         <ion-label position="floating">Nombre</ion-label>
-        <ion-input type="text" required></ion-input>
+        <ion-input type="text" ></ion-input>
       </ion-item>
-
-    </form>
+      <ion-list>
+        
+        
+        <ion-item *ngFor="let ingrediente of ingredientes; let i=index">
+          <ion-label position="floating">Ingrediente {{i+1}} </ion-label>
+            <ion-input [(ngModel)]="otroIngrediente" type="text"></ion-input>
+        </ion-item>
+        <ion-button size="small" (click)="addIngredientes()" >
+          <ion-icon slot="start" color="primary-contrast" name="add"></ion-icon>
+          Añadir ingrediente
+        </ion-button>
+        
+    </ion-list>
+    <section text-center>
+      <ion-button size="large" type="submit" text-capitalize="false"  (click)="search()" > Buscar</ion-button><br /><br />
+    </section>
+  </form>
   </ion-content>
   

@@ -17,7 +17,26 @@
           <ion-label position="floating">Password</ion-label>
           <ion-input type="password" required></ion-input>
         </ion-item>
-    
+        <ion-item lines="full">
+          <ion-label position="floating">Repite el password</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Edad</ion-label>
+         
+            <ion-select>
+              <ion-select-option *ngFor="let number of numbers">{{number}}</ion-select-option>
+            </ion-select>
+            
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Sexo</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
         <ion-row>
           <ion-col>
             <ion-button type="submit" color="primary" expand="block">Sign In</ion-button>

@@ -40,6 +40,18 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'tabs/tab3/delete',
+    loadChildren: () => import('./tab3/delete/delete.module').then( m => m.DeletePageModule)
+  },
+  {
+    path: 'tabs/tab3/own',
+    loadChildren: () => import('./tab3/own/own.module').then( m => m.OwnPageModule)
+  },
+  {
+    path: 'tabs/tab3/modify-account',
+    loadChildren: () => import('./tab3/modify-account/modify-account.module').then( m => m.ModifyAccountPageModule)
   }
 ];
 @NgModule({

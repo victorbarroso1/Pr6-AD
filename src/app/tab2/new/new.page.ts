@@ -16,7 +16,12 @@ export class NewPage implements OnInit {
   }
   ngOnInit() {
   }
-  
+  ingredientes = [
+    
+  ];
+  addIngredientes() {
+    this.ingredientes.push("");
+}
 
 }
 

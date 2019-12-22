@@ -17,21 +17,47 @@
           <ion-label position="floating">Nombre</ion-label>
           <ion-input type="text" required></ion-input>
         </ion-item>
-    
+        <ion-item lines="full">
+          <ion-label position="floating">Tiempo en minutos</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Dificultad </ion-label>
+          <br />{{value}}
+          <ion-range min="0" max="100" step="1" value="0" pin="true"  [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></ion-range>
+        </ion-item>
         <ion-item lines="full">
           <ion-label position="floating" >Descripción</ion-label>
           <ion-textarea class="bigtext"></ion-textarea>
         </ion-item>
-
+        <ion-list>
+        
+        
+          <ion-item *ngFor="let ingrediente of ingredientes; let i=index">
+            <ion-label position="floating">Ingrediente {{i+1}}</ion-label>
+              <ion-input [(ngModel)]="otroIngrediente" type="text"></ion-input>
+          </ion-item>
+          <section text-center>
+            <ion-button size="small" (click)="addIngredientes()" >
+              <ion-icon slot="start" color="primary-contrast" name="add"></ion-icon>
+              Añadir ingrediente
+            </ion-button>
+          </section>
+          
+          
+      </ion-list>
         <ion-item>
-            <ion-button>
-              
+            <ion-button text-capitalize="false">
+              <ion-icon slot="start" color="medium" name="attach"></ion-icon>  
+              Subir foto       
             </ion-button>
         </ion-item>
         <ion-row>
           <ion-col>
+           
             <ion-button type="submit" color="primary" expand="block">Crear</ion-button>
-          </ion-col>
+            
+           </ion-col>
         </ion-row>
       </form>
   </ion-content>

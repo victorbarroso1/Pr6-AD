@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AutosizeDirective } from './autosize.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 //import { IonicImageViewerModule } from 'ionic-img-viewer';
 
@@ -17,7 +18,7 @@ import { AutosizeDirective } from './autosize.directive';
 @NgModule({
   declarations: [AppComponent, AutosizeDirective],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
   providers: [
     StatusBar,
     //IonicImageViewerModule,

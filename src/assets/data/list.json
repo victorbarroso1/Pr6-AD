@@ -1,0 +1,26 @@
+{
+    "ingredientes": [ {
+      "id": "1",
+      "name": "Curry de Verduras con patatas asadas",
+      "time": "60",
+      "stars": "42",
+      "description": "1. Si vamos a acompañar el curry de verduras con patatas asadas, lo primero que haremos es lavar bien las patatas y hacerles un corte profundo por la parte superior (fíjate en la abertura que tienen en la foto). 2. Las ponemos a cocer en abundante agua hirviendo y las dejaremos hasta que se puedan atravesar fácilmente por un tenedor o un palillo.",
+      "imagen": "receta1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Caldo de navidad con caracolas rellenas",
+      "time": "30",
+      "stars": "23",
+      "description": "descriptions",
+      "imagen": "receta2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Medications",
+      "time": "90",
+      "stars": "52",
+      "description": "descriptions"
+    }
+    ]
+}

@@ -43,7 +43,9 @@
       
 
       <!-- se muestran las 5 últimas recetas -->
-      <ion-item *ngFor="let recipe of recent_recipes_Array" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">      
+      <!--<ion-item *ngFor="let recipe of recent_recipes_Array" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">  -->
+      <ion-item *ngFor="let recipe of data" routerLink="/recipe/{{recipe.name}}" routerDirection="forward">      
+     
         <ion-thumbnail slot="start" >
           <!-- la imagen del thumbnail será variable de la receta-->
             <img src="/assets/img/{{recipe.imagen}}"/>

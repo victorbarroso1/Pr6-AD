@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
@@ -7,20 +6,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-  constructor() { }
+
+
+
+  constructor() {    
+  }
 
   ngOnInit() {
   }
   ingredientes = [
-    
-];
+  ];
 
 addIngredientes() {
     this.ingredientes.push("");
 }
+
 search(){
   //pasar al backend los datos de ingredientes y nombre
-  
+
 }
 
 }
